@@ -1,3 +1,5 @@
+
+
 <?php
 //Форматирование строки в виде CSV и запись её в файловый указатель
 $list = array (
@@ -8,7 +10,9 @@ $list = array (
 
 $fp = fopen('file.csv', 'w');
 
-
+//foreach ($list as $line) {
+//    fputcsv($fp, ',' , $line);
+//}
 
 foreach ($list as $fields) {
     fputcsv($fp, (array)$fields);
@@ -16,7 +20,6 @@ foreach ($list as $fields) {
 
 
 fclose($fp);
-
 ?>
 
 <?php
@@ -34,3 +37,5 @@ while (($data = fgetcsv($handle, 10, ",")) !== FALSE) {
 }
 fclose($handle);
 ?>
+
+
