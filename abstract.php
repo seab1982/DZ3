@@ -121,6 +121,12 @@ echo $zil->getmaxKg('10000') . "\n";
 
 echo "<br>";
 
+var_dump($zil);
+var_dump($gra);
+var_dump($riv);
+var_dump($jac);
+var_dump($class);
+
 
 
 
