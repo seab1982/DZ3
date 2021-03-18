@@ -33,4 +33,17 @@ while (($data = fgetcsv($handle, 10, ",")) !== FALSE) {
     }
 }
 fclose($handle);
+
+$arrayHelper = array('foo' => array('bar' => 'baz'));
+$mas = ['Aaa' => array('dino'=> 'zavr')];
+$arrayHelper = array_dot($mas);
+echo " $arrayHelper ";
+
+// array('foo.bar' => 'baz');
+
+function exempleConcat()
+{
+    global $str1, $str2;
+    return $str1.$str2;
+}
 ?>
